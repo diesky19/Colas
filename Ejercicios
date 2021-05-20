@@ -1,0 +1,154 @@
+package EjerCol;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Colas {
+
+  public static void main(String[] args) {
+   
+   Scanner teclado = new Scanner(System.in);
+   
+  System.out.println("Que programa quieres usar");
+  
+  System.out.println(" 1.- Suma de dos pilas \n" + " 2.- Pilas letras \n" + " 3.- Suma de dos colas \n" + " 4.- Colas letras \n");
+  
+  int a = teclado.nextInt();
+  
+  switch(a){
+    
+    case 1: 
+    
+     int tam, men, res, tope = 0;
+     System.out.println("Ingresar el tamaño de las pilas A y B : ");
+     int[] pila = new int[tam = teclado.nextInt()];
+     System.out.println(" \n  1 - Llenar Pilas A y B \n "+ " 2 - Mostrar Pilas A y B \n "
+      + " 3 - Vaciar Pilas A y B \n "
+      + " 4 - Unir Pilas A y B \n "
+      + " 5 - Mostrar Pila C \n ");
+      switch(men = teclado.nextInt()){
+    case 1:
+    System.out.println("Ingresar valores para A");
+    pila[tope] = teclado.nextInt();
+    System.out.println("Ingresar valores para B");
+    pila[tope] = teclado.nextInt();
+    tope++;
+    break;
+    case 2:
+    for(int i = tope - 1; i >= 0; i-- ){
+    System.out.println(" " + pila [i]);}
+    System.out.println("La pila esta vacia....");
+    break;
+    case 3:
+    int w = 0 ;
+    System.out.println("Pilas eliminadas......." + pila [w] + "Eliminadas");
+    tope--;
+    for(int i = 0; i< tope; i++){
+    pila[i] = pila[i + 1];}
+    break;
+    case 4:
+    System.out.println("Sumando pilas..");
+    break;
+    case 5:
+    System.out.println("La nueva pila es: ....." + pila [tope] );break;} 
+
+    case 2:
+    System.out.println("Menu Opciones \n" 
+    + " 1.- Llenar \n"
+    + " 2.- Mostrar \n" 
+    + " 3.- Eliminar \n" 
+    + " 4.- Salir \n");
+    int n = teclado.nextInt(); 
+    Stack pila1 = new Stack();
+    switch(n){
+    case 1:
+    System.out.println(" Pila llena");
+    break;
+    case 2:
+    System.out.println(" La pila es..."
+    + pila1.push("Z") + pila1.push("Y") 
+    + pila1.push("X") + pila1.push("W")
+    + pila1.push("V") + pila1.push("U")
+    + pila1.push("T") + pila1.push("S") 
+    + pila1.push("R") + pila1.push("Q")
+    + pila1.push("P") + pila1.push("O")
+    + pila1.push("Ñ") + pila1.push("N") 
+    + pila1.push("M") + pila1.push("L")
+    + pila1.push("K") + pila1.push("J")
+    + pila1.push("I") + pila1.push("H")
+    + pila1.push("G") + pila1.push("F")
+    + pila1.push("E") + pila1.push("D")
+    + pila1.push("C") + pila1.push("B")
+    + pila1.push("A")); break;
+    case 3: 
+    System.out.println(" Dato eliminado ");
+    break;
+    case 4: 
+    System.out.println(" Saliendo de la pila ");
+    break; }
+    
+    case 3:
+    Queue<String> cola = new LinkedList<String>();
+    System.out.println(" Estamos Agregando Datos");
+    cola.add("70 "); cola.add("90");
+    cola.add("\n  50 "); cola.add("75");
+    cola.add("\n  10 "); cola.add("10");
+    cola.add("\n  15 "); cola.add("35");
+    cola.add("\n  30 "); cola.add("87");
+    cola.add("\n  20 "); cola.add("68");
+    System.out.println("  1.- Mostrar \n "
+    + " 2.- Sumar colas \n "
+    + " 3.- Cola nueva \n "
+    + " 4.- Eliminar colas \n ");
+    int b = teclado.nextInt();
+    switch(b){
+      case 1:
+      System.out.println(" Las colas es...\n "
+      + cola);
+      break;
+      
+      case 2: 
+      System.out.println("Las colas se estan sumando");
+      break;
+      
+      case 3: 
+      Queue<String> cola1 = new LinkedList<String>();
+      cola1.add(" 160 \n");
+      cola1.add(" 20  \n");
+      cola1.add(" 50  \n");
+      cola1.add("117 \n");
+      cola1.add(" 88  \n");
+      System.out.print("La nueva cola es...\n"
+      + cola1);
+      break;
+      
+      case 4: 
+      System.out.println(" Eliminando colas");
+      break;
+      }
+    
+      case 4:
+      Queue<String> cola2 = new LinkedList<String>();
+    System.out.println(" Estamos Agregando Datos");
+    cola2.add("Z"); cola2.add("Y");
+    cola2.add("X"); cola2.add("W");
+    cola2.add("V"); cola2.add("U");
+    cola2.add("T"); cola2.add("S");
+    cola2.add("R"); cola2.add("Q");
+    cola2.add("P"); cola2.add("O");
+    cola2.add("Ñ"); cola2.add("N");
+    cola2.add("M"); cola2.add("L");
+    cola2.add("K"); cola2.add("J");
+    cola2.add("I"); cola2.add("H");
+    cola2.add("G"); cola2.add("F");
+    cola2.add("E"); cola2.add("D");
+    cola2.add("C"); cola2.add("B");
+    cola2.add("A"); 
+    System.out.println("La cola es... \n"
+    + cola2);
+}
+}
+}
